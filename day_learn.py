@@ -6,9 +6,8 @@
 乘法拼接字符串
 elif or ：
 函数5件套
-
-
 """
+import random
 
 
 def _learn():
@@ -16,7 +15,7 @@ def _learn():
     def my_name(X) : return 函数5件套
     """
     price = float(input("单价："))  # 输入中读取单价float格式
-    print("价格是：%d,年龄是：%s" % (price, "25"), end="")  # 格式化输出，使用""替换原来的换行
+    print("价格是：%d,年龄是：%s" % (price, "25"),end="")  # 格式化输出，使用""替换原来的换行
     print("*" * 100)  # 乘法可以拼接字符串
 
     # 条件判断
@@ -28,7 +27,6 @@ def _learn():
         print("3")
 
     # 随机数
-    import random
     a = random.randint(2, 5)
     print(a)
 
@@ -39,9 +37,9 @@ def _learn():
         n -= 1
 
 
-def _test():
-    return "hello"
+def test():
+    n = 6
 
 
 if __name__ == '__main__':
-    _test()  #函数名()才会执行
+    test()  # 函数名()才会执行
