@@ -3,7 +3,6 @@
 格式化输出 % (price, "25")
 输入
 / ；//；% ；** 除；除后取整；取余；幂
-乘法拼接字符串
 elif or ：
 函数5件套
 """
@@ -38,7 +37,7 @@ def _learn():
 
 
 def test():
-    n = 6
+    print(float(input("单价：")))
 
 
 if __name__ == '__main__':

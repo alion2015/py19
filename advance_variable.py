@@ -13,6 +13,12 @@ for 变量 in 集合:
     循环体代码
 else:
     没有通过 break 退出循环，循环结束后，会执行的代码
+slice 切片[开始索引:结束索引:步长]
+
+just strip extend update
+
+which python3
+#! /usr/bin/python3(shebang写在文件首行指明 执行这个脚本文件 的 解释程序)
 """
 
 import day_learn as dl  # 引入模块
@@ -99,7 +105,7 @@ def _tuple():
 def _dict():
     """
     指定k->读写(可以是新增)
-    pop(k),len(name),update(合并)
+    pop(k),len(name),update(合并)     p长更
     """
     xiaoming_dict = {"name": "小明"}
 
@@ -143,7 +149,6 @@ def _str():
     ljust、center 对齐
     strip，lstrip 去空白
     split、join 分(默认空白字符)合
-    slice 切片[开始索引:结束索引:步长]
     """
     hello_str = "hello hello"
 
