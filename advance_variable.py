@@ -19,6 +19,16 @@ just strip extend update
 
 which python3
 #! /usr/bin/python3(shebang写在文件首行指明 执行这个脚本文件 的 解释程序)
+
+r"..." 不转义：:所见即所得，不被str转义
+
+全局变量名前应该增加 g_ 或者 gl_ 的前，默认不可修改，可通过 global XXX 申明后再修改
+
+列表变量调用 += 本质上是在执行列表变量的 extend 方法，不会修改变量的引用{没有赋值过程}
+
+a, b = b, a  python中交换两个变量的值
+
+id(item) 输出item引用对象的地址
 """
 
 import day_learn as dl  # 引入模块
