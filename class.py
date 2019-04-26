@@ -15,6 +15,8 @@ self 就是对象本身的引用
 __str__  返回对象的描述信息，print 函数输出使用
 __mro__  在多继承时判断 方法、属性 的调用 路径{method resolution order}
 
+Python 中每一个模块都有一个内置属性 __file__ 可以 查看模块 的 完整路径
+
 属性初始值，可以设置为 None，可以将 None 赋值给任何一个变量，表示什么都没有{定义空变量} XX is None
 
 is 用于判断 两个变量 引用对象是否为同一个 == 用于判断 引用变量的值 是否相等
@@ -93,3 +95,5 @@ if __name__ == '__main__':
     if tom is not None:
         tom.eat()
         tom._Cat__secret()  # 添加_类名 可以访问私有属性和方法，但不推荐
+
+        包和发布模块
