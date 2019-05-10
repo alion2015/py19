@@ -21,11 +21,11 @@
 """
 
 
-from flask import Flask, url_for  # 1.导入Flask类
+from flask_6 import Flask, url_for  # 1.导入Flask类
 from werkzeug.routing import BaseConverter  # 自定义路由转换
-from flask import request   # request获取参数 cookies / args
-from flask import jsonify   # 用于返回json数据
-from flask import redirect   # 重定向
+from flask_6 import request   # request获取参数 cookies / args
+from flask_6 import jsonify   # 用于返回json数据
+from flask_6 import redirect   # 重定向
 
 # 自定义正则转换器
 class RegexConverter(BaseConverter):

@@ -29,9 +29,15 @@ r"..." 不转义：:所见即所得，不被str转义
 a, b = b, a  python中交换两个变量的值
 
 id(item) 输出item引用对象的地址
+
+isinstance('abc', Iterable) 判断是否可迭代对象
+可以通过iter()函数获取这些可迭代对象的迭代器。然后我们可以对获取到的迭代器不断使用next()函数来获取下一条数据
+
+
+
 """
 
-import day_learn as dl  # 引入模块
+import base_1 as dl  # 引入模块
 
 
 def _list():
@@ -155,7 +161,7 @@ def _dict():
 def _str():
     """
     len,count,index  长个位置
-    is,find,replace 盘茶tea
+    is,find,replace 找查体
     ljust、center 对齐
     strip，lstrip 去空白
     split、join 分(默认空白字符)合

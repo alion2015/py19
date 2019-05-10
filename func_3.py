@@ -44,6 +44,7 @@ if __name__ == '__main__':
     demo(1, 2, 3, 4, 5, name="小明", age=18, gender=True)
     arg = (1, 2, 3, 4, 5)
     kwarg = {"name": "小明", "age": 18, "gender": True}
-    demo(1, arg, kwarg)     # 贪婪的元组中存放不同类型元素，可以是字典，需要拆包
+    demo(1, arg, kwarg)     # 贪婪的元组中存放不同类型元素，可以是字典，需要拆包  //错误
+    demo(1, arg=arg, kwarg=kwarg)     # 拆包                                      //错误
     demo(1, *arg, **kwarg)     # 拆包
     pass
