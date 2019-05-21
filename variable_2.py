@@ -22,7 +22,7 @@ which python3
 
 r"..." 不转义：:所见即所得，不被str转义
 
-全局变量名前应该增加 g_ 或者 gl_ 的前，默认不可修改，可通过 global XXX 申明后再修改
+全局变量名前应该增加 g_ 或者 gl_ 的前，默认不可修改，可通过 global XXX 申明后再修改(nonlocal XXX 闭包外的数据声明到本地)
 
 列表变量调用 += 本质上是在执行列表变量的 extend 方法，不会修改变量的引用{没有赋值过程}
 
@@ -33,8 +33,11 @@ id(item) 输出item引用对象的地址
 isinstance('abc', Iterable) 判断是否可迭代对象
 可以通过iter()函数获取这些可迭代对象的迭代器。然后我们可以对获取到的迭代器不断使用next()函数来获取下一条数据
 
+copy.copy/deepcopy浅拷贝与深拷贝
 
+str = "nihao{}shenm,e{}hah{}".format(342,2,"yeh")字符串格式化的一种方式
 
+str = "nihao" if 4 > 5 else "buhao"
 """
 
 import base_1 as dl  # 引入模块

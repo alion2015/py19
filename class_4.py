@@ -12,11 +12,15 @@ self 就是对象本身的引用
 2__init__ 初始化，用来定义属性的方法
 -1__del__  对象被从内存中销毁前，会被 自动 调用
 1__new__ 是一个 由 object 基类提供的 内置的静态方法，主要作用有两个：在内存中为对象 分配空间；返回 对象的引用  {实现单例}
-__str__  返回对象的描述信息，print 函数输出使用
+__str__  print 函数输出使用，类似tostring描述信息
 __iter__ 有该方法的可以对象可以迭代(函数中返回一个实现了__next__方法的对象,将self作为参数传入；也可以是自己本身)
-__mro__  在多继承时判断 方法、属性 的调用 路径{method resolution order}
 
+ __doc__ 类信息描述属性
+__mro__  在多继承时判断 方法、属性 的调用 路径{method resolution order}
 Python 中每一个模块都有一个内置属性 __file__ 可以 查看模块 的 完整路径
+__module__ 表示当前操作的对象在那个模块
+__class__ 表示当前操作的对象的类是什么
+__dict__ 属性输出类或对象中的所有属性
 
 属性初始值，可以设置为 None，可以将 None 赋值给任何一个变量，表示什么都没有{定义空变量} XX is None
 
@@ -44,6 +48,17 @@ super().XX()调用父类中方法实现
     # 从 当前目录 导入 模块列表
     from . import send_message
     from . import receive_message
+
+property属性：可以有内部计算的属性
+    1）@property 装饰器xx.setter/deleter
+    2） BAR = property(get_bar, set_bar, del_bar, "description...")
+
+元类：type(类名, 由父类名称组成的元组（针对继承的情况，可以为空），包含属性的字典（名称和值）)
+    属性中可以传入方法
+    元类就是类的类
+    元类的主要目的就是为了当创建类时能够自动地改变类。
+
+
 """
 
 
@@ -97,4 +112,3 @@ if __name__ == '__main__':
         tom.eat()
         tom._Cat__secret()  # 添加_类名 可以访问私有属性和方法，但不推荐
 
-        包和发布模块

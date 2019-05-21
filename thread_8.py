@@ -17,6 +17,14 @@ multiprocessing.Queue(N).qsize()/empty()/full()/get_nowait()/get([block[, timeou
 
 multiprocessing.Pool(N).terminate()/close()/join()/apply_async(func[, args[, kwds]]) ：使用非阻塞方式调用func（并行执行，堵塞方式必须等待上一个进程退出才能执行下一个进程）
 
+ L = [ x*2 for x in range(5)]   --->   G = ( x*2 for x in range(5))    列表生成式[]--->生成器()
+ 将原本在迭代器__next__方法中实现的基本逻辑放到一个函数中来实现，但是将每次迭代返回数值的return换成了yield，此时新定义的函数便不再是函数，而是一个生成器了。
+ 简单来说：只要在def中有yield关键字的 就称为 生成器
+ yield关键字有两点作用：
+    保存当前运行状态（断点），然后暂停执行，即将生成器（函数）挂起
+    将yield关键字后面表达式的值作为返回值返回，此时可以理解为起到了return的作用
+可以使用next()函数让生成器从断点处继续执行，即唤醒生成器（函数）,还可以使用send()函数来唤醒执行(传入附加参数);Python3中的生成器可以使用return返回最终运行的返回值
+gevent自动实现协程，是yield的进化版，greenlet可以手动控制
 
 """
 
