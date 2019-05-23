@@ -70,6 +70,14 @@ parse函数间传递参数
     meta是个字典类型，meta = {"item":item}
     response.meta["item"]
 open_spdier/close_spider 爬虫开始/关闭的时候执行一次，只有一次
+COOKIES_DEBUG = True 可以跟踪cookie传递过程
+process_request(self, request, spider)：/process_response(self, request, response, spider)：
+当每个request通过下载中间件时，该方法被调用;/当下载器完成http请求，传递响应给引擎的时候调用,需要返回response
+登录
+    携带cookie登录，准备cookie字典，scrapy.Request(url,callback,cookies=cookies_dict)
+    scrapy.FormRequest(post_url,formdata={},callback)
+    scrapy.FormRequest.from_response(response,formdata,callback)
+
 CrawlSpider
     满足某个条件的url地址，我们才发送给引擎，同时能够指定callback函数
     scrapy genspider –t crawl csdn “csdn.cn”
