@@ -67,4 +67,14 @@ def main_keep(): #写入txt文本程序
                 print('********正在爬取中，这是第{}次爬取********'.format(count))
 
 if __name__ == '__main__':
-        main_print()
+    n = 1000
+    #
+    #     while(n>0):
+    #         proxy = get_proxies()
+    #         f.write("")
+    #         n-=1
+    url = 'http://www.xicidaili.com/nn/'
+    ip_list = get_ip_list(url, headers=headers)
+    with open("list.txt","a",encoding="utf-8") as f:
+        for ip in ip_list:
+            f.write(ip+"\n")

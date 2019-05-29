@@ -1,4 +1,9 @@
 """
+
+sudo vim /etc/nginx/sites-available/o821.com
+gunicorn -w 4 -b 127.0.0.1:5001 main:app
+京ICP备19017435号-1
+
 环境依赖
     pip freeze > requirements.txt
     pip install -r requirements.txt
@@ -18,6 +23,26 @@
     2.before_request在每一次请求之前调用，做请求的校
     3.after_request(响应)每一次请求之后，响应做最后一步统一的处理
     4.teardown_request(错误信息)每一次请求之后，参数是服务器出现的错误信息
+
+
+sudo systemctl stop nginx
+要再次启动，请键入：
+sudo systemctl start nginx
+重新启动Nginx服务：
+sudo systemctl restart nginx
+在进行一些配置更改后重新加载Nginx服务：
+$sudo systemctl reload nginx
+如果你想禁用Nginx服务在启动时启动：
+$sudo systemctl disable nginx
+并重新启用它：
+$sudo systemctl enable nginx
+
+
+ps aux | grep gunicorn
+sudo vim /etc/nginx/sites-available/default
+uwsgi --ini uwsgi.ini
+
+gunicorn manage:app &
 """
 
 
