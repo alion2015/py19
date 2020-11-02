@@ -6,14 +6,18 @@
 公共方法
 
 tuple(列表)/list(元组) 转换
-(元组)->[列表]->{字典}
+1.tuple()->list[]->dict{:,:}->set{}
+(元组)->[列表]->{:,:字典}->{set}
 len/del/max/min公共函数
 可用运算符+ /* /in/not in /(> < ==等比较)
-for 变量 in 集合:
+2.for x in range(6):else(无break完成循环是才执行)
     循环体代码
 else:
     没有通过 break 退出循环，循环结束后，会执行的代码
-slice 切片[开始索引:结束索引:步长]
+3.slice 切片[开始索引:结束索引:步长]   ---有头无尾;一个：步长1;无：首尾同，指定元素
+4.dict.items()/keys()/values()
+5.列表生成式 [x *x for x in range(1,11) if x %2==0][终式 for筛选]
+[x*x if x>30 else -x*x for x in range(100)]终式有if必有else筛选只能有if
 
 just strip extend update
 
@@ -26,7 +30,7 @@ r"..." 不转义：:所见即所得，不被str转义
 
 列表变量调用 += 本质上是在执行列表变量的 extend 方法，不会修改变量的引用{没有赋值过程}
 
-a, b = b, a  python中交换两个变量的值
+6.a, b = b, a  python中交换两个变量的值
 
 id(item) 输出item引用对象的地址
 
